@@ -1,0 +1,59 @@
+// ** Variables
+@mixin solid-field {
+   background-color: $field-bg ;
+   border-color: $border-color;
+}
+
+/* Large desktops Layout: 1280px */
+@mixin extra-xlarge {
+   @media (min-width: 1399.98px) {
+     @content;
+   }
+ }
+ @mixin xlarge {
+   @media (max-width: 1399.98px) {
+     @content;
+   }
+ }
+ 
+ /* Desktops Layout: 768px */
+ @mixin large {
+   @media (max-width: 1199.98px) {
+     @content;
+   }
+ }
+ 
+ /* Medium devices (tablets, 768px and up) */
+ @mixin medium {
+   @media (max-width: 991.98px) {
+     @content;
+   }
+ }
+ 
+ /* Small devices (landscape phones, 576px and up)*/
+ @mixin small {
+   @media (max-width: 767.98px) {
+     @content;
+   }
+ }
+ 
+ // Extra small devices (portrait phones, less than 576px)
+ @mixin xsmall {
+   @media (max-width: 575.98px) {
+     @content;
+   }
+ }
+ 
+ // for iPhone 5S, Galaxy Fold
+ @mixin extra-xsmall {
+   @media (max-width: 398.98px) {
+     @content;
+   }
+ }
+ 
+ @mixin cmq ($min, $max) {
+   @media (min-width: $min) and (max-width: $max) {
+     @content;
+   }
+ }
+ 

@@ -1,0 +1,30 @@
+.managerShowBtn {
+  width: 12rem;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #28c76f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 300ms all;
+
+  .title {
+    transition: 300ms all;
+  }
+
+  &:hover {
+    background-color: #28c76f;
+    color: #fff;
+  }
+
+  &:hover .title {
+    background-color: #28c76f;
+    color: #fff;
+  }
+}
+
+// // @avazalijamal buar mene mane olurdu
+// .ant-select-selector {
+// //     height: 35px !important;
+// // }

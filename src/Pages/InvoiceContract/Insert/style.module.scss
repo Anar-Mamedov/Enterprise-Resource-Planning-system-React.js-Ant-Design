@@ -1,0 +1,37 @@
+.paymentBtn {
+    cursor: pointer;
+    width: 50%;
+    height: 38px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.activeStatus {
+    background-color: #28C76F;
+    color: #fff;
+    border: none
+}
+
+.some {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.cardParent {
+    @extend .some;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.justifyBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardDesign {
+    width: 350px;
+    background-color: lightgray;
+}

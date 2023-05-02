@@ -1,0 +1,36 @@
+.c-datepicker {
+   padding-inline: $field-inline-padding;
+   padding-block: $picker-block-padding;
+
+   input::placeholder {
+      color: $secondary !important;
+      font-weight: 500 !important;
+      font-size: 15px;
+   }
+
+   &.ant-picker-focused {
+      box-shadow: none !important;
+      border-color: $field-border-color !important;
+   }
+
+   &--solid {
+      @include solid-field;
+   }
+
+   &-calendar {
+      .ant-picker-cell {
+         padding: 2px 0 !important;
+
+         &-inner {
+            height: $picker-size !important;
+            width: $picker-size !important;
+            line-height: $picker-size !important;
+            border-radius: 50% !important;
+
+            &::before {
+               border-radius: 50% !important;
+            }
+         }
+      }
+   }
+}

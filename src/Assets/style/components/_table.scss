@@ -1,0 +1,71 @@
+.c-table {
+   padding: $table-padding;
+   width: 100%;
+
+   thead {
+      tr {
+         > td, 
+         > th {
+            padding: $table-header-cell-padding;
+            text-transform: uppercase;
+            background-color: $table-head-bg !important;
+   
+            .ant-table-column-title,
+            .ant-typography {
+               color: $gray-400 !important;
+               font-size: 12px !important;
+            }
+   
+            //Title color of sorted column
+            &.ant-table-column-sort {
+               .ant-table-column-title,
+               .ant-typography {
+                  color: $primary !important;
+               }
+            }
+         }
+      }
+   }
+
+   .ant-table {
+      border: $table-border-width solid $border-color;
+
+      &-footer {
+         padding: 0 !important;
+      }
+   }
+
+   .ant-checkbox {
+      &-inner {
+         background-color: $checkbox-bg-color;
+         border-color: transparent !important;
+         width: $table-checkbox-w;
+         height: $table-checkbox-h;
+      }
+
+      &-checked {
+         .ant-checkbox-inner {
+            background-color: $primary !important;
+
+            //check icon
+            &::after {
+               width: 7px;
+               height: 11px;
+            }
+         }
+      }
+   }
+
+   &-header {
+      padding: $table-header-padding;
+      border-bottom: $table-border-width solid $border-color;
+   }
+
+   &-row {
+      color: $gray-dark;
+
+      td {
+         padding: $table-cell-padding !important;
+      }
+   }
+}

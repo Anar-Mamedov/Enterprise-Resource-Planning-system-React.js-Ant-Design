@@ -1,0 +1,106 @@
+.pageDocumentType {
+   min-height: 100%;
+
+   .content {
+      background-color: #fff;
+      position: relative;
+
+      .statusBox {
+         background-color: #E8F1FC;
+         min-height: 56px;
+         padding-left: 16px;
+         padding-right: 8px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         position: absolute;
+         width: 100%;
+         z-index: 999;
+
+         .text {
+            font-size: 18px;
+            color: #858A90;
+         }
+      }
+
+      .search {
+         .ant-collapse {
+            border: none;
+
+            .ant-collapse-header {
+               display: none;
+            }
+
+            .ant-collapse-content-box {
+               padding: 3px;
+            }
+         }
+      }
+
+      .tableHeader {
+         width: 100%;
+         padding: 18px;
+
+         button {
+            margin-right: 5px;
+         }
+
+         .none {
+            background-color: transparent;
+            border: none;
+         }
+      }
+   }
+
+   .buttonGroup {
+      display: flex;
+
+      .dataType {
+
+         .activeBtn,
+         .deactiveBtn {
+            height: 100%;
+            color: #5E5873 !important;
+            padding: 4px 18px !important;
+            border-radius: 4px 4px 0px 0px !important;
+            border: none !important;
+            border-bottom: 1px solid #EFEFEF !important;
+
+            &.active {
+               border-bottom: 1px solid #0D6DFD !important;
+               background: rgba(13, 110, 253, 0.05);
+            }
+         }
+      }
+   }
+
+   .excel {
+      width: 58px;
+      height: 37px;
+      background: #28C76F;
+      border-radius: 5px;
+   }
+
+   .print {
+      width: 58px;
+      height: 37px;
+      background: #FFFFFF;
+      color: #000;
+      border: 1px solid #D8D6DE;
+      border-radius: 5px;
+   }
+}
+
+.new {
+   border: 1px solid #7367F0;
+   color: #7367F0;
+   width: 94px;
+   height: 38px;
+
+   &:hover {
+      color: #7367F0;
+      border: 1px solid #7367F0;
+   }
+
+   // padding: 0 ;
+}

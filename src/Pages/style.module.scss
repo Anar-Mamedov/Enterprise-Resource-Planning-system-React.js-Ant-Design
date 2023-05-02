@@ -1,0 +1,15 @@
+:is(.btnDecrease, .btnIncrease) {
+   height: 38px;
+   display: flex;
+   align-items: center;
+}
+
+.btnIncrease {
+   border-color: green;
+   color: green;
+}
+
+.btnDecrease {
+   border-color: red;
+   color: red;
+}

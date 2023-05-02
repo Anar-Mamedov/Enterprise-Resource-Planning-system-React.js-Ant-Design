@@ -1,0 +1,18 @@
+.seperateCol {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 20px;
+    height: 16vh;
+    width: 100% !important;
+    overflow-y: scroll;
+}
+
+.transferBtn {
+    background-color: #28C76F;
+    color: #fff;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 300;
+}

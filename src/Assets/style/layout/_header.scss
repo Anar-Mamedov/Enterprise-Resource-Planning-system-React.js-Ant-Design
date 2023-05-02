@@ -1,0 +1,14 @@
+.header {
+   padding-inline: $layout-margin;
+   background-color: $white !important;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: $header-shadow;
+
+   .user-dropdown {
+      // background-color: var(--bs-menu-dropdown-bg-color);
+      border-radius: 0.475rem;
+      // box-shadow: var(--bs-menu-dropdown-box-shadow);
+   }
+}

@@ -1,0 +1,18 @@
+.status-box {
+   background-color: #E8F1FC;
+   min-height: 60px;
+   padding-inline: 25px;
+   align-items: center;
+   justify-content: space-between;
+   position: absolute;
+   top: 1%;
+   left: 0%;
+   right: 0%;
+   border-radius: $border-radius;
+   z-index: 999;
+
+   &__text {
+      font-size: 18px;
+      color: $dark;
+   }
+}

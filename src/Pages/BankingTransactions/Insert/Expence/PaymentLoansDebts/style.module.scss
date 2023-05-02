@@ -1,0 +1,12 @@
+.group {
+  width: 100%;
+}
+.radio {
+  width: 33%;
+}
+.radioMiddle {
+  composes: radio;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+

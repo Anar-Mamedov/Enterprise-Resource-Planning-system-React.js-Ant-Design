@@ -1,0 +1,53 @@
+.active-button,
+.deactive-button,
+.subdeactive-button  {
+   min-width: 90px;
+   border-radius: $border-radius $border-radius 0px 0px !important;
+   border: none !important;
+   border-bottom: 1px solid $border-color !important;
+
+}
+
+.deactive-button {
+   border-bottom: 1px solid $red !important;
+   color: $red !important;
+
+   &.active {
+      background-color: rgba($red, 0.1);
+   }
+
+   &:hover {
+      background-color: rgba($red, 0.05);
+   }
+}
+
+.subdeactive-button {
+   // border-bottom: 1px solid $red !important;
+   border-bottom: 1px solid $tail !important;
+   // color: $red !important;
+   color: $tail !important;
+
+   &.active {
+      // background-color: rgba($red, 0.1);
+      background-color: rgba($tail, 0.1);
+   }
+
+   &:hover {
+      // background-color: rgba($red, 0.05);
+      border: none;
+      background-color: rgba($tail, 0.05);
+   }
+}
+
+.active-button {
+   border-bottom: 1px solid $success !important;
+   color: $success !important;
+
+   &.active {
+      background: rgba($success, 0.1);
+   }
+
+   &:hover {
+      background: rgba($success, 0.05);
+   }
+}

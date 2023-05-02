@@ -1,0 +1,89 @@
+// ** Colors
+$blue: #007bff;
+$red: #dc3545;
+$tail: #1e81b0;
+$green: #28a745;
+$gray-100: #F9F9F9;
+$gray-200: #f4f4f4;
+$gray-300: #e1e3ea;
+$gray-400: #b5b5c3;
+$gray-500: #a1a5b7;
+$gray-600: #7e8299;
+$gray-700: #5e6278;
+$gray-800: #3f4254;
+$gray-900: #181c32;
+$excel: #1D6F42;
+$menu-bg-hover: #F4F6FA;
+
+$primary: $green;
+// $primary:#3699ff;
+$secondary: $gray-400;
+$light: $gray-100;
+$dark: $gray-900;
+$gray: $gray-600;
+$gray-dark: $gray-800;
+$success: #1bc5bd;
+$info: #457b9d;
+$warning: #ffa800;
+$danger: #e63946;
+$white: #fff;
+$purple: #1d3557;
+
+
+// ** Drawer
+$drawer-sm-width: 30%;
+$drawer-lg-width: 80%;
+
+// ** Table
+$table-cell-padding: 1rem 0.625rem; //10px
+$table-header-padding: 0.625rem 0 0.9375rem; //20px 30px
+$table-bg-splitted: rgb(249, 255, 255);
+$table-head-bg: $white;
+$table-border-width: 1px;
+$table-padding: 1rem 0 0;
+$table-header-cell-padding: 1rem .5rem !important;
+$table-checkbox-w: 20px;
+$table-checkbox-h: 20px;
+
+// ** Base
+$base-background: $light;
+$checkbox-bg-color: $gray-200;
+$layout-margin: 25px;
+$border-radius: 6px;
+$border-color: $gray-200;
+$border-width: 1px;
+
+// ** Form
+$field-border-color: $gray-300;
+$field-bg: $light;
+$field-color: $gray-700;
+$field-focus-shadow: 0 0 0 1px darken($border-color, 1%);
+$field-inline-padding: 0.8125rem;
+
+//Input
+$input-block-padding: 0.5313rem; //8.5px
+//Select
+$select-block-padding: 0.125rem; //2px
+$select-dropdown-bg: $white;
+$select-dropdown-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+$select-option-hover-bg: $menu-bg-hover;
+$select-option-hover-color: $primary;
+//Datepicker
+$picker-block-padding: 0.375rem; //6px
+$picker-size: 39px;
+
+// ** Button
+$btn-padding: 0.6875rem 1.3125rem;
+
+// ** Shadows
+$header-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+$table-shadow: 0px 0px 20px 0px rgba(76, 87, 125, 0.02);
+// $user-dropdown-shadow: 0px 0px 50px 0px rgba(82,63,105,.15);
+$user-dropdown-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+// ** Sider
+$sider-bg: #1E1E2D;
+
+// ** User dropdown
+$user-dropdown-bg-color-hover: $menu-bg-hover;
+$user-dropdown-bg-color: $white;

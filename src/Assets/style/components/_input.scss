@@ -1,0 +1,39 @@
+%focus {
+   box-shadow: none !important;
+   // box-shadow: $field-focus-shadow !important;
+   border-color: transparent !important;
+   background-color: $gray-200 !important;
+}
+
+.c-input {
+   font-weight: 500;
+   padding-inline: $field-inline-padding;
+   padding-block: $input-block-padding;
+   line-height: 1;
+   color: $field-color !important;
+
+   &:focus {
+      @extend %focus;
+   }
+
+   .ant-input:focus {
+      @extend %focus;
+   }
+
+   &::placeholder {
+      color: $secondary !important
+   }
+
+   //Focused input with icon
+   &.ant-input-affix-wrapper-focused {
+      @extend %focus;
+   }
+
+   &--solid {
+      @include solid-field;
+
+      .ant-input {
+         @extend .c-input--solid
+      }
+   }
+}

@@ -1,0 +1,30 @@
+.prfParent {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 30px 5px;
+    margin-bottom: 25px;
+
+    .prfName {
+        margin: 0;
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        background-color: #28C76F;
+        font-weight: 400;
+        letter-spacing: 1px;
+        color: #fff;
+        width: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 1.5rem;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
+    .prfProduct {
+        &:not(&:last-child) {
+            border-bottom: 1px solid rgb(200, 200, 200);
+        }
+    }
+}

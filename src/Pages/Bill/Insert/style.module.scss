@@ -1,0 +1,155 @@
+    ul.ant-transfer-list-content {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        li.ant-transfer-list-content-item {
+            margin: 3px;
+        }
+    }
+
+    .ant-form-item-explain-error {
+        font-size: 12px;
+    }
+
+    .paymentBtn {
+        cursor: pointer;
+        width: 50%;
+        height: 38px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid lightgray;
+    }
+
+    .activePaymentStatus {
+        background-color: #28C76F;
+        color: #fff;
+        border: none
+    }
+
+    .etaxes {
+        width: 100%;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #28C76F;
+        color: #28C76F;
+        cursor: pointer;
+        transition: 300ms all;
+
+        &:hover {
+            background-color: #28C76F;
+            color: #fff;
+            border: 1px solid transparent;
+        }
+    }
+
+    .checkboxInput {
+        cursor: pointer;
+        appearance: none;
+        width: 15px;
+        height: 20px;
+        border: 1px solid #28C76F;
+        position: relative;
+        border-radius: 5px;
+
+        &:checked {
+            background-color: #28C76F;
+        }
+
+        &:checked::before {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff,
+        }
+    }
+
+    .submitCalcelBtn {
+        width: 200px;
+        height: 40px;
+    }
+
+    .submitBtn {
+        @extend .submitCalcelBtn;
+        margin-right: 5px;
+        background-color: #28C76F;
+        color: #fff;
+    }
+
+    .cancelBtn {
+        @extend .submitCalcelBtn;
+        margin-left: 5px;
+        border: 1px solid #28C76F;
+        color: #28C76F
+    }
+
+    .hideScrollBar {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .float {
+        padding: 1rem 3rem 3rem 2rem;
+        border-right: '1px solid lightgray';
+        scroll-snap-align: center;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    .tabButton {
+        width: 100%;
+        height: 38px;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border-right: 1px solid lightgray;
+    }
+
+    .activeTabButton {
+        background-color: #28C76F;
+        color: #fff;
+        border: none
+    }
+
+    .activeArrow {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: #28C76F transparent transparent transparent;
+        }
+    }
+
+    .seperateCol {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 20px;
+        height: 16vh;
+        width: 100% !important;
+        overflow-y: scroll;
+    }
+
+    .transferBtn {
+        background-color: #28C76F;
+        color: #fff;
+        padding: 3px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 300;
+    }

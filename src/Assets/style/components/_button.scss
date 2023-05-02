@@ -1,0 +1,27 @@
+.c-btn {
+   padding: $btn-padding;
+   font-weight: 500;
+   height: auto;
+   line-height: 1;
+
+   &.ant-btn-icon-only {
+      width: 39px !important;
+   }
+
+   &--excel {
+      // border-color: $excel;
+      color: $white !important; 
+      background-color: $excel;
+
+      &:hover {
+         background-color: lighten($excel, 10%);
+      }
+   }
+
+   &--icon {
+      > span {
+         font-size: 1rem;
+      }
+   }
+}
+

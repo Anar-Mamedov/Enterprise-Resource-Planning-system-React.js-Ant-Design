@@ -1,0 +1,25 @@
+.layout-sider {
+   min-height: 100vh;
+   .sider {
+      border-right: 1px solid $border-color;
+   }
+   .logo {
+      padding: 1rem;
+      width: 100%;
+      background-color: $sider-bg;
+      justify-content: space-between;
+
+      &--light {
+         background-color: $white;
+      }
+      &--dark {
+         color: $white;
+      }
+   }
+   .switch {
+      background: $primary;
+      &:hover:not(:disabled) {
+         background-color: darken($primary, 10%)
+      }
+   };
+}

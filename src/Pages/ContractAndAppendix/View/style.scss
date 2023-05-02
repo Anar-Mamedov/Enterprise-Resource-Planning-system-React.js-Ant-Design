@@ -1,0 +1,33 @@
+.title {
+    .some {
+        width: 80%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .statusTitle {
+        @extend .some;
+        color: #1677ff;
+        background-color: #ebf3ff;
+    }
+
+    .statusType {
+        @extend .some;
+        background: rgba(255, 159, 67, 0.1);
+        color: #FF9F43;
+    }
+
+    .showEditBtn {
+        @extend .some;
+        color: #fff;
+        background-color: #1677ff;
+    }
+}
+
+.showText {
+    font-size: 20px;
+}

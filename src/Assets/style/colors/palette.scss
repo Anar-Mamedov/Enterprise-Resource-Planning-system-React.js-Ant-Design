@@ -1,0 +1,351 @@
+//  ================================================================================================
+//  WARNING: PLEASE DO NOT CHANGE THIS VARIABLE FILE.
+//  TIP:
+//  We suggest you to use this (Assets/style/colors/palette.scss) file for overriding color variables.
+//  ================================================================================================
+
+// usage: theme-color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color-function($color, $type) {
+   @if map-has-key($colors, $color) {
+      $curr_color: map-get($colors, $color);
+
+      @if map-has-key($curr_color, $type) {
+         @return map-get($curr_color, $type);
+      }
+   }
+
+   // @warn "Unknown `#{name}` in $colors.";
+   @return null;
+}
+
+@import 'palette-variables';
+
+@each $color_name,
+$color in $colors {
+
+   @each $color_type,
+   $color_value in $color {
+      @if $color_type=='base' {
+
+         // background color
+         .bg-#{$color_name} {
+            background-color: $color_value !important;
+
+            .card-header,
+            .card-footer {
+               background-color: transparent;
+            }
+         }
+
+         // bg color lighten for rgba - opacity set
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white' and $color_name !='dark') {
+            .bg-light-#{$color_name} {
+               background: rgba($color_value, 0.12) !important;
+               color: $color_value !important;
+            }
+         }
+
+         // avatar with light bg
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white' and $color_name !='dark') {
+            .avatar.bg-light-#{$color_name} {
+               color: $color_value !important;
+            }
+         }
+
+         // Border colors
+         .border-#{$color_name} {
+            border: 1px solid $color_value !important;
+         }
+
+         .border-top-#{$color_name} {
+            border-top: 1px solid $color_value;
+         }
+
+         .border-bottom-#{$color_name} {
+            border-bottom: 1px solid $color_value;
+         }
+
+         .border-start-#{$color_name} {
+            border-left: 1px solid $color_value;
+         }
+
+         .border-end-#{$color_name} {
+            border-right: 1px solid $color_value;
+         }
+
+         // badge glow colors
+         .bg-#{$color_name},
+         .border-#{$color_name} {
+            &.badge-glow {
+               box-shadow: 0px 0px 10px $color_value;
+            }
+         }
+
+         // Badge Background Color
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .badge {
+
+               // Badge Light Background
+               &.badge-light-#{$color_name} {
+                  background-color: rgba($color: $color_value, $alpha: 0.12);
+                  color: $color_value !important;
+               }
+            }
+         }
+
+         // Basic buttons
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .c-btn--#{$color_name} {
+               border-color: $color_value !important;
+               background-color: $color_value !important;
+               color: $white !important;
+
+               &:focus,
+               &:active,
+               &.active,
+               &:focus-visible {
+                  color: $white;
+                  background-color: color-function($color_name, 'darken-1') !important;
+               }
+
+               &:hover:not(.disabled):not(:disabled) {
+                  box-shadow: 0 8px 25px -8px rgba($color-value, 1);
+               }
+
+               &:not(:disabled):not(.disabled):active:focus {
+                  box-shadow: none;
+               }
+            }
+
+            .btn-check {
+
+               &:checked,
+               &:active {
+                  +.btn-#{$color_name} {
+                     color: $white;
+                     background-color: color-function($color_name, 'darken-1') !important;
+                  }
+               }
+            }
+         }
+
+         // For Btn Flat
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .c-btn-flat-#{$color-name} {
+               background-color: transparent;
+               color: $color-value;
+
+               &:hover {
+                  color: $color-value;
+               }
+
+               &:hover:not(.disabled):not(:disabled) {
+                  background-color: rgba($color-value, 0.12);
+               }
+
+               &:active,
+               &.active,
+               &:focus {
+                  background-color: rgba($color: $color_value, $alpha: 0.2);
+                  color: $color_value;
+               }
+            }
+         }
+
+         // For Btn Relief
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .c-btn-relief-#{$color-name} {
+               background-color: $color-value;
+               box-shadow: inset 0 -3px 0 0 rgba($dark, 0.2);
+               color: $white;
+               transition: all 0.2s ease;
+
+               @if $color_name =='dark' {
+                  &:hover:not(.disabled):not(:disabled) {
+                     background-color: color-function($color_name, 'darken-3');
+                  }
+               }
+
+               @else {
+                  &:hover:not(.disabled):not(:disabled) {
+                     background-color: color-function($color_name, 'lighten-1');
+                  }
+               }
+
+               &:active,
+               &.active,
+               &:focus {
+                  background-color: color-function($color_name, 'darken-1');
+               }
+
+               &:hover {
+                  color: $white;
+               }
+
+               &:active,
+               &.active {
+                  outline: none;
+                  box-shadow: none;
+                  transform: translateY(3px);
+               }
+            }
+         }
+
+         // Outline buttons
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .c-btn-outline-#{$color_name} {
+               border: 1px solid $color_value !important;
+               background-color: transparent;
+               color: $color_value;
+
+               &:hover:not(.disabled):not(:disabled) {
+                  background-color: rgba($color: $color_value, $alpha: 0.04);
+                  color: $color_value;
+               }
+
+               &:not(:disabled):not(.disabled):active:focus {
+                  box-shadow: none;
+               }
+
+               &:not(:disabled):not(.disabled):active,
+               &:not(:disabled):not(.disabled).active,
+               &:not(:disabled):not(.disabled):focus {
+                  background-color: rgba($color: $color_value, $alpha: 0.2);
+                  color: $color_value;
+               }
+            }
+
+            .btn-check {
+
+               &:checked,
+               &:active {
+                  +.btn-outline-#{$color_name} {
+                     color: $color_value;
+                     background-color: rgba($color: $color_value, $alpha: 0.2) !important;
+                  }
+               }
+            }
+         }
+
+         // Wave effect
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+
+            .c-btn-outline-#{$color_name},
+            .c-btn-flat-#{$color-name} {
+               &.waves-effect {
+                  .waves-ripple {
+                     background: radial-gradient(rgba($color_value, 0.2) 0,
+                           rgba($color_value, 0.3) 40%,
+                           rgba($color_value, 0.4) 50%,
+                           rgba($color_value, 0.5) 60%,
+                           rgba($white, 0) 70%);
+                  }
+               }
+            }
+         }
+
+         // Modal
+         //  @if ($color_name != 'light' and $color_name != 'black' and $color_name != 'white') {
+         //    .modal {
+         //      &.modal-#{$color_name} {
+         //        .modal-header {
+         //          .modal-title {
+         //            color: $color_value;
+         //          }
+         //          .btn-close {
+         //            background: $white
+         //              str-replace(str-replace(escape-svg($btn-close-bg), 'currentColor', $color_value), '#', '%23')
+         //              center /
+         //              $btn-close-width
+         //              auto
+         //              no-repeat !important;
+         //            color: $color_value !important;
+         //          }
+         //        }
+         //      }
+         //    }
+         //  }
+
+         // Progress Bars
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .c-progress-bar-#{$color_name} {
+               background-color: rgba($color_value, 0.12);
+
+               .c-progress-bar {
+                  background-color: $color-value;
+               }
+            }
+         }
+
+         // Divider
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .divider.divider-#{$color-name} {
+               .divider-text {
+
+                  &:before,
+                  &:after {
+                     border-color: $color-value !important;
+                  }
+               }
+            }
+         }
+
+         // Form Input Elements
+         // Checkbox & Radio
+
+         // todo: remove it once confirm
+         input:focus~.bg-#{$color_name} {
+            box-shadow: 0 0 0 0.075rem $white, 0 0 0 0.21rem $color_value !important;
+         }
+
+         // Custom Checkbox & Radio
+         @if ($color_name !='light' and $color_name !='black' and $color_name !='white') {
+            .form-check-#{$color_name} {
+               .form-check-input {
+                  &:checked {
+                     border-color: $color_value;
+                     background-color: $color_value;
+                  }
+
+                  &:not(:disabled) {
+
+                     &:checked,
+                     &:focus {
+                        border-color: $color_value;
+                        box-shadow: 0 2px 4px 0 rgba($color_value, 0.4);
+                     }
+                  }
+               }
+            }
+         }
+      } @else {
+          // background color
+          .bg-#{$color_name}-#{$color_type} {
+            background-color: $color_value !important;
+         }
+
+         // Border colors
+         .border-#{$color_name}-#{$color_type} {
+            border: 1px solid $color_value !important;
+         }
+
+         .border-top-#{$color_name}-#{$color_type} {
+            border-top: 1px solid $color_value;
+         }
+
+         .border-bottom-#{$color_name}-#{$color_type} {
+            border-bottom: 1px solid $color_value;
+         }
+
+         .border-start-#{$color_name}-#{$color_type} {
+            border-left: 1px solid $color_value;
+         }
+
+         .border-end-#{$color_name}-#{$color_type} {
+            border-right: 1px solid $color_value;
+         }
+      }
+   }
+}

@@ -1,0 +1,15 @@
+.c-menu {
+   overflow: auto;
+   border-inline-end: 0 !important;
+   height: calc(100% - 66px);
+
+   // @include extra-xlarge {
+   //    height: calc(100% - 300px);
+   // }
+   // @include medium {
+   //    height: calc(100% - 300px);
+   // }
+   // @include extra-xlarge {
+   //    height: calc(100% - 300px);
+   // }
+}

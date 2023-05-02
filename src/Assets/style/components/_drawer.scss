@@ -1,0 +1,15 @@
+.c-drawer {
+   position: relative;
+
+   .fixed-submit-buttons {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      // background-color: rgba(51, 48, 60, 0.04);
+      background-color: $gray-100;
+      border-top: 1px solid $gray-300;
+      width: 100%;
+      padding: 20px;
+      gap: .5rem;
+   }
+}

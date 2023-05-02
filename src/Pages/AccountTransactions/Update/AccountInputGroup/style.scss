@@ -1,0 +1,29 @@
+.inputgroup-container {
+    width: 100%;
+    margin-top: 2rem;
+
+}
+
+.inner-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .inner-input {
+        // text-align: center;
+    }
+
+    .upper_input {
+        // width: 144px;
+        // margin-bottom: 0;
+        // color: #BABFC7;
+    }
+
+    .bottom_input {
+        width: 244px;
+        margin-bottom: 0;
+        // margin-bottom: 0;
+        // color: #BABFC7;
+    }
+}

@@ -1,0 +1,2 @@
+C:\Users\avaz.aj\Desktop\avazalijamal\finance\obj\Debug\finance.esproj.SuggestedBindingRedirects.cache
+C:\Users\avaz.aj\Desktop\avazalijamal\finance\obj\Debug\finance.esproj.CoreCompileInputs.cache

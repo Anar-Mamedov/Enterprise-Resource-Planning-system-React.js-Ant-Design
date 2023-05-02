@@ -1,0 +1,28 @@
+.user-dropdown {
+   padding: 13px 0;
+   background-color: $user-dropdown-bg-color;
+   border-radius: 0.475rem;
+   box-shadow: $user-dropdown-shadow;
+   ul {
+      padding: 13px 16px !important;
+      box-shadow: none !important;
+      li {
+         padding: 8px 16px !important;
+         color: $gray !important;
+         font-weight: 500 !important;
+         &:hover {
+            color: $primary !important;
+            background-color: $user-dropdown-bg-color-hover !important;
+         }
+      }
+   }
+
+   &__head {
+      padding: 8px;
+      margin: 0 8px;
+
+      .head-text {
+         color: $gray-500;
+      }
+   }
+}

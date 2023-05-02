@@ -1,0 +1,40 @@
+.managerShowBtn {
+    width: 12rem;
+    height: 40px;
+    border-radius: 5px;
+    color: #28c76f;
+    border: 1px solid #28C76F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 300ms all;
+}
+
+.excelShow {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #28C76F;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 150ms all;
+    border: 1px solid transparent;
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid #28C76F;
+    }
+
+    .excelIcon {
+        color: #fff
+    }
+
+    &:hover .excelIcon {
+        color: #28C76F;
+    }
+}
+
+.ant-layout.css-dev-only-do-not-override-sk7ap8 {
+    background-color: #fff;
+}

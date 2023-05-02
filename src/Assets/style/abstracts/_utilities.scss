@@ -1,0 +1,173 @@
+// ** Drawer
+.c-drawer-sm {
+   width: $drawer-sm-width;
+}
+
+.c-drawer-lg {
+   width: $drawer-lg-width;
+}
+
+// ** Table
+.bg-table-splitted {
+   background-color: $table-bg-splitted !important;
+}
+
+//-------------- Sizing --------------
+//------------------------------------
+
+// Sizes Variable for height and width mixins
+$sizes-px: (
+   // in px
+   50: 50px,
+   100: 100px,
+   150: 150px,
+   200: 200px,
+   250: 250px,
+   300: 300px,
+   350: 350px,
+   400: 405px,
+   450: 455px,
+   500: 500px,
+   550: 550px,
+   600: 600px,
+   650: 650px,
+   700: 700px,
+   750: 750px,
+   800: 800px) !default;
+
+$sizes-per: (
+   // in %
+   5: 5%,
+   10: 10%,
+   15: 15%,
+   20: 20%,
+   25: 25%,
+   30: 30%,
+   35: 35%,
+   40: 40%,
+   45: 45%,
+   50: 50%,
+   55: 55%,
+   60: 60%,
+   65: 65%,
+   70: 70%,
+   75: 75%,
+   80: 80%,
+   85: 85%,
+   90: 90%,
+   95: 95%) !default;
+
+// Width && Height
+.fit {
+   max-width: 100% !important;
+}
+
+.half-width {
+   width: 50% !important;
+}
+
+.full-width {
+   width: 100% !important;
+}
+
+.full-height {
+   height: 100% !important;
+}
+
+//--------------- Radius ---------------
+//------------------------------------
+.rounded {
+   border-radius: .25rem !important;
+}
+
+.rounded-circle {
+   border-radius: 50% !important;
+}
+
+// height & width in PX
+@each $name,
+$size in $sizes-px {
+   .h-#{$name} {
+      height: $size !important;
+   }
+
+   .w-#{$name} {
+      width: $size !important;
+   }
+}
+
+// height & width in %
+@each $name,
+$size in $sizes-per {
+   .h-#{$name}-per {
+      height: $size !important;
+   }
+
+   .w-#{$name}-per {
+      width: $size !important;
+   }
+}
+
+//--------------- Text ---------------
+//------------------------------------
+
+// Font Size
+//----------
+//small
+.font-small-1 {
+   font-size: 0.7rem !important;
+}
+
+.font-small-2 {
+   font-size: 0.8rem !important;
+}
+
+.font-small-3 {
+   font-size: 0.9rem !important;
+}
+
+.font-small-4 {
+   font-size: 1rem !important;
+}
+
+//medium
+.font-medium-1 {
+   font-size: 1.1rem !important;
+}
+
+.font-medium-2 {
+   font-size: 1.2rem !important;
+}
+
+.font-medium-3 {
+   font-size: 1.3rem !important;
+}
+
+.font-medium-4 {
+   font-size: 1.4rem !important;
+}
+
+.font-medium-5 {
+   font-size: 1.5rem !important;
+}
+
+//large
+.font-large-1 {
+   font-size: 2rem !important;
+}
+
+.font-large-2 {
+   font-size: 3rem !important;
+}
+
+.font-large-3 {
+   font-size: 4rem !important;
+}
+
+.font-large-4 {
+   font-size: 5rem !important;
+}
+
+.font-large-5 {
+   font-size: 6rem !important;
+}
