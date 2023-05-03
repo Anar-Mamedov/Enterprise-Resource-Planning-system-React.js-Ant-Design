@@ -6,7 +6,7 @@ https://master--fabulous-croissant-ee25b5.netlify.app/
 
 ---
 
-![Alt text](https://github.com/Anar-Mamedov/react-task-ant-design/blob/main/1.jpg)
+![Alt text](https://github.com/Anar-Mamedov/Enterprise-Resource-Planning-system-React.js-Ant-Design/blob/main/1.jpg)
 
 ---
 
